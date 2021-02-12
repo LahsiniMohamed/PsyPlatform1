@@ -1,0 +1,26 @@
+.seanceInfo{
+    display: flex;
+    background-color:  var(--lightBlue);
+    max-width: max-content;
+    height: 18px;
+    border-radius: 5px;
+    padding: 2px 20px;
+    font-size: 13px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    color: var(--darkBlueMain);
+    margin-right: 10px;
+    align-items: center;
+    .seanceInfo__time{
+        margin: 0;
+        padding-right: 10px;
+    }
+    .devider{
+        height: 80%;
+        border-right: 2px solid var(--darkBlueMain);
+    }
+    .seanceInfo__price{
+        margin: 0;
+        padding-left: 10px;
+    }
+}

@@ -1,0 +1,60 @@
+import React from 'react'
+import Avatar from '../../Components/Avatar/Avatar'
+import ReadOnly from '../../Components/Rating/ReadOnly'
+import SeanceInfo from '../DoctorBadge/SeanceInfo'
+
+
+import './DoctorBadge.scss'
+
+/* doctorInfo = {
+    firstName : 'Salma',
+    lastName : 'Errahimi',
+    shcedule : {object},
+    rating : 3,
+    about : 'sdqsdqsdqsldqmlsdkmlkmldk mlk' ,
+    seanceInfo : {price : 100,
+                  time : 60     
+            },
+} */
+const doctorInfoTest = {
+    firstName : 'Salma',
+    lastName : 'Errahimi',
+    shcedule : {},
+    rating : 3,
+    about : 'sdqsdqsdqsldqmlsdkmlkmldk mlk' ,
+    seanceInfo : {price : 100,
+                  time : 60     
+            },
+    image : 'data:image/jpeg;base64,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'        
+}
+
+function DoctorBadge({doctorInfo , ...props}) {
+    const {firstName , lastName , rating , about , seanceInfo , image} = doctorInfo
+    return (
+        <div className = "doctorBadge">
+            {/* Avatar Icon */}
+            <div className="doctorBadge__left">
+                <Avatar image = {image} type = 'big' className="avatar"/>
+            </div>
+            {/* INFO SECTION */}
+            <div className = "doctorBadge__Info">
+                {/* UserName */}
+                <h3 className = "username">{firstName} {lastName}</h3>
+                {/*time and price */}
+                <div className="doctorBadge__InfoFooter">
+                    <SeanceInfo info={seanceInfo}/>
+                    {/*rating */}
+                    <ReadOnly rating = {rating}/>
+                </div>
+                {/* about */}
+                <div className="doctorBadge__InfoAbout">
+                    <p>{about}</p>
+                </div>
+            </div>    
+            {/* EndInfo */}
+            
+        </div>
+    )
+}
+
+export default DoctorBadge
