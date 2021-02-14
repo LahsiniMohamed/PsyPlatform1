@@ -21,13 +21,13 @@ const Container = styled.div`
 
 `
 const converter = (type)=> {
-    if (type == "big") {
+    if (type === "big") {
         return sizes.big
     }
-    if (type == "small") {
+    if (type === "small") {
         return sizes.small
     }
-    if (type == "normal") {
+    if (type === "normal") {
         return sizes.normal
     }
 }
