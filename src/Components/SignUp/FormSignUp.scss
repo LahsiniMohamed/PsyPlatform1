@@ -1,0 +1,54 @@
+.sign-up-form {
+    width: 90%;
+    margin: 15px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--darkBlueMain);
+    border-radius: 12px;
+    .row {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 15px;
+
+        .col {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            margin: 0 25px;
+        }
+
+        p {
+            color: #A5A5A5;
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .rules {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+
+            span {
+                margin-left: 10px;
+                font-size: 14px;
+                color: black;
+
+                span {
+                    margin: 0;
+                    color: var(--lightBlueMain);
+                }
+            }
+        }
+
+        .sinscrire {
+            width: 20%;
+            margin: auto;
+            background-color: red;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            border-color: transparent;
+        }
+    }
+}
